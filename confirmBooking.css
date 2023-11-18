@@ -3,12 +3,11 @@ body {
     justify-content: center;
     height: 100vh;
     margin: 0;
-    background-color: #f4f4f4;
   }
   
 h3{
-    padding-top: 3%;
-    margin-left: 38%;
+  text-align: center;
+  padding-bottom:15px;
 }
 
 form {
