@@ -1,0 +1,88 @@
+.container {
+    max-width: 90%;
+    margin: auto;
+}
+
+button {
+    background: #CC8C18;
+    color: white;
+    font-weight: bold;
+    padding: 15px 25px;
+    outline: none;
+    border: none;
+    border-radius: 30px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+button a{
+    color: darkgrey;
+}
+
+button a:hover{
+    color:#fff;
+}
+
+button:hover {
+    background-color: Grey; 
+    color: #fff;
+    transform: scale(1.1);
+  }
+
+button i {
+    margin-left: 20px;
+    font-size: 25px;
+}
+  
+button span {
+    margin-top: 5px;
+}
+
+.top {
+    margin-top: 80px;
+}
+
+.heading {
+    text-align: center;
+}
+  
+.heading h5 {
+    font-weight: 400;
+    letter-spacing: 5px;
+    color: #CC8C18;
+    padding-top: 20px;
+}
+
+.heading h2 {
+    color: #24416B;
+    font-size: 45px;
+    font-family: serif;
+    font-weight: bold;
+    margin: 10px 0 20px 0;
+}
+
+.left .right{
+    width: 50%;
+}
+  
+h3 {
+    font-size: 35px;
+    font-family: serif;
+    color: #24416B;
+    margin-bottom: 20px;
+}
+  
+p {
+    line-height: 30px;
+    color: #a4a4a4;
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+
+.about {
+    position: relative;
+    padding-bottom: 70px;
+}
+
+span{
+    margin-left: 5%;
+}

@@ -1,0 +1,118 @@
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+
+    p{
+      font-family: 'Arial', sans-serif;
+      font-size: 18px;
+      color: #333;
+      line-height: 1.5;
+      margin-bottom: 20px;
+      text-align: left;
+      background-color: #f8f8f8;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+
+    section {
+      padding: 20px;
+    }
+
+
+    
+
+    .room {
+      border: 1px solid #ddd;
+      margin-bottom: 20px;
+      padding: 10px;
+    }
+    
+    .room img{
+        display: block;
+        margin: 0 auto;
+        max-width: 10%;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        float: left;
+      }
+
+    img{
+      width: 450px;
+      height: 10%;
+      padding:20px;
+      float: left;
+    }
+
+
+
+    div.elem-group {
+      margin: 20px 0;
+    }
+    
+    div.elem-group.inlined {
+      width: 49%;
+      display: inline-block;
+      margin-left: 1%;
+    }
+    
+    label {
+      display: block;
+      font-family: 'Nanum Gothic';
+      padding-bottom: 10px;
+      font-size: 1.25em;
+    }
+    
+    input, select{
+      border-radius: 2px;
+      border: 2px solid #777;
+      box-sizing: border-box;
+      font-size: 1.25em;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    div.elem-group.inlined input {
+      width: 95%;
+      display: inline-block;
+    }
+    div.elem-group.inlined input {
+      width: 95%;
+      display: inline-block;
+    }
+    hr {
+      border: 1px dotted #ccc;
+    }
+    
+    button {
+      height: 40px;
+      background: blue;
+      text-decoration: none;
+      border:#333;
+      color: white;
+      font-size: 1.25em;
+      font-family: 'Nanum Gothic';
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    
+    button:hover {
+      border: 2px solid black;
+    }
+    

@@ -1,0 +1,35 @@
+footer table{
+    margin-left: 150;
+    height: 250px;
+    margin-top: 50px;
+    width:1000px;
+    text-align: center;}
+
+footer table tr th{
+    width:500px;
+    text-align: center;}
+
+footer{
+    background-color: white;
+   }
+
+
+footer h2{
+        width: 90%;
+        text-align: center;
+        font-size: 1.5em;
+        font-weight: 700;}
+
+
+footer h1{              
+        font-weight: 800;
+        color: black;}
+
+
+
+.logoFooter{
+    margin-left: 43%;
+    align-items: center;
+    height: 140px;
+    width: 170px;    
+}
