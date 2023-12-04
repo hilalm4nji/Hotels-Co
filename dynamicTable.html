@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="NavBar.css">
+    <title>Reservation System</title>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <a href="index.html"><img src="media/logo.png"></a>
+        </div>
+
+        <div class="nav-items"style="margin-left: 45%; margin-top: 3%;">
+            <a href="index.html">Go Back</a>
+        </div>
+    </div>
+<p>Table isnt complete we didnt have time to do css this is the most we could've done!</p><br><br>
+
+<form id="reservationForm">
+    <table>
+      <tr>
+        <td><label for="name">Name:</label></td>
+        <td><input type="text" id="name" required></td>
+      </tr>
+      <tr>
+        <td><label for="email">Email:</label></td>
+        <td><input type="email" id="email" required></td>
+      </tr>
+      <tr>
+        <td><label for="phone">Phone:</label></td>
+        <td><input type="tel" id="phone" required></td>
+      </tr>
+      <tr>
+        <td><label for="adults">Adults:</label></td>
+        <td><input type="number" id="adults" required></td>
+      </tr>
+      <tr>
+        <td><label for="children">Children:</label></td>
+        <td><input type="number" id="children" required></td>
+      </tr>
+      <tr>
+        <td><label for="checkin">Check-in:</label></td>
+        <td><input type="date" id="checkin" required></td>
+      </tr>
+      <tr>
+        <td><label for="checkout">Check-out:</label></td>
+        <td><input type="date" id="checkout" required></td>
+      </tr>
+      <tr>
+        <td><label for="roomPreference">Room Preference:</label></td>
+        <td>
+          <select id="roomPreference">
+            <option value="connecting">Connecting</option>
+            <option value="adjoining">Adjoining</option>
+            <option value="adjacent">Adjacent</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td><label for="hotel">Hotel:</label></td>
+        <td>
+          <select id="hotel" required>
+            <option value="Great Southern Hotel">Great Southern Hotel</option>
+            <option value="Parc Royal Quaint in Le Marais">Parc Royal Quaint in Le Marais</option>
+            <option value="Jolie Ville Hotel & Spa Kings Island Luxor">Jolie Ville Hotel & Spa Kings Island Luxor</option>
+            <option value="Metro Hotel Marlow Sydney Central">Metro Hotel Marlow Sydney Central</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2"><button type="button" onclick="addReservation()">Add Reservation</button></td>
+      </tr>
+    </table>
+  </form>
+  
+
+<button type="button" onclick="displayTable1()">Display Table 1</button>
+<table id="table1">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Number</th>
+            <th>Adults</th>
+            <th>Children</th>
+            <th>Check-in</th>
+            <th>Check-out</th>
+            <th>Hotel</th>
+        </tr>
+    </thead>
+    <tbody></tbody>
+</table>
+
+
+<script>
+    function Reservation(name, phone, adults, children, checkin, checkout, hotel) { // add the reservation into an array
+        this.name = name;
+        this.phone = phone;
+        this.adults = adults;
+        this.children = children;
+        this.checkin = checkin;
+        this.checkout = checkout;
+        this.hotel = hotel;
+    }
+
+    var reservationsArray1 = [];
+    var reservationsArray2 = [];
+
+    function displayTable1() { // prints the elements into a table 
+        var tableBody = document.getElementById("table1").getElementsByTagName('tbody')[0]; 
+        tableBody.innerHTML = "";
+
+        reservationsArray1.forEach(function (reservation) {
+            var row = tableBody.insertRow(); // adds a new row and prints the new data in it
+            row.insertCell(0).innerHTML = reservation.name;
+            row.insertCell(1).innerHTML = reservation.phone;
+            row.insertCell(2).innerHTML = reservation.adults;
+            row.insertCell(3).innerHTML = reservation.children;
+            row.insertCell(4).innerHTML = reservation.checkin;
+            row.insertCell(5).innerHTML = reservation.checkout;
+            row.insertCell(6).innerHTML = reservation.hotel;
+        });
+    }
+
+
+    function addReservation() { // the reservations are added into an array
+        var name = document.getElementById("name").value;
+        var phone = document.getElementById("phone").value;
+        var adults = document.getElementById("adults").value;
+        var children = document.getElementById("children").value;
+        var checkin = document.getElementById("checkin").value;
+        var checkout = document.getElementById("checkout").value;
+        var hotel = document.getElementById("hotel").value;
+
+        var newReservation = new Reservation(name, phone, adults, children, checkin, checkout, hotel); // the new data is added into the array to be printed
+        reservationsArray1.push(newReservation);
+        document.getElementById("reservationForm").reset();
+    }
+
+</script>
+
+</body>
+</html>

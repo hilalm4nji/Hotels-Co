@@ -19,18 +19,20 @@
     </div>
 
     <div class="nav-items">
-      <a href="index.html">Home</a>
-      <a href="contact us.html">Contact Us</a>
-      <a href="AboutUs.html">About Us</a>
-      <a href="News.html">News</a>
-      <a href="reservations.html">Rooms & Reservation</a>
+        <a href="index.html">Home</a>
+        <a href="contact us.html">Contact Us</a>
+        <a href="AboutUs.html">About Us</a>
+        <a href="News.html">News</a>
+        <a href="reservations.html">Rooms & Reservation</a>
+        <a href="funPage.html">Fun Page</a>
+        <a href="Questionnaire.html"> Questionnaire </a>
     </div>
   </div>
 
 
 <section>
   <div class="hotel">
-    <img src="media/b_b.jpg">
+    <img class="hotelRoom" src="media/b_b.jpg">
     <h2>Great Southern Hotel</h2>
     <p> <strong> Description:</strong> A luxurious hotel with a central location. Enjoy your stay in one of our elegant rooms. 
         Great Southern Hotel is located in a historic 19th-century building in the heart of Paris
@@ -43,7 +45,7 @@
 <hr>
 
 <div class="hotel">
-    <img src="media/guest.jpg" alt="">
+    <img class="hotelRoom" src="media/guest.jpg" alt="">
     <h2>Parc Royal Quaint in Le Marais</h2>
     <p> <strong>Description: </strong>Experience a relaxing stay at our beachfront resort. Enjoy stunning views and top-notch amenities.
         Comfortable 2 Bedroom Apartment in Tooting offers accommodations in London, 2.8 miles from Morden 
@@ -56,7 +58,7 @@
     </div>
 
 <div class="hotel">
-    <img src="media/egypt.jpg" alt="">
+    <img class="hotelRoom" src="media/egypt.jpg" alt="">
     <h2>Jolie Ville Hotel & Spa Kings Island Luxor</h2>
     <p> <strong>Description:</strong> Jolie Ville Hotel & Spa Kings Island Luxor is a luxurious resort located on a private island.
        Surrounded by 165 acres of landscaped gardens, it overlooks the Nile and features 3 outdoor swimming pools.
@@ -68,7 +70,7 @@
     <p><a  style="background-color: rgb(0, 247, 255);text-decoration: none;" href="confirmBooking.html">Book here</a></p>
 </div>
 <div class="hotel">
-    <img src="media/sydney.jpg" alt="">
+    <img class="hotelRoom" src="media/sydney.jpg" alt="">
     <h2>Metro Hotel Marlow Sydney Central</h2>
     <p> <strong>Description:</strong> Metro Hotel Marlow Sydney Central is located in Sydney CBD (Central Business District), 
         close to public transport and just 5 minutes walk from Central Station. The famous Capitol 
@@ -82,7 +84,51 @@
 </body>
 <footer>
   <img src="media/logo.png" class="logoFooter">
-      <table style="margin-left:15%;">
+  <br>
+      <marquee direction="left" height="70" color="#001f3f">
+          <strong style="color:navy; font-size: 30px;">Welcome to the Hotel & Co website!</strong>
+          <p style="margin-left: 62px;font-weight: bold;color: grey;" id="CurrentDandT"></p>
+              <div>
+                      <script>
+                          function CurrentDandT() 
+                          {
+                              const now = new Date();
+                              const date = now.toDateString();
+                              const time = now.toLocaleTimeString();
+                              document.getElementById('CurrentDandT').innerHTML = `Today is ${date}, and the time is ${time}`;
+                          }
+                  CurrentDandT();
+                  setInterval(CurrentDandT, 1000);
+                      </script>
+              </div>
+      </marquee>
+      <div id="photo-gallery">
+          <img src="media/hotel1.jpg" alt="hotel photo" class="active">
+          <img src="media/hotel2.jpg" alt="hotel photo">
+          <img src="media/hotel3.jpg" alt="hotel photo">
+      </div>
+      <div id="text"></div>
+
+      <script>
+          const images = document.querySelectorAll('#photo-gallery img');
+          let currentIndex = 0;
+          function showImage(index) {
+              images.forEach((img, i) => {
+              if (i === index) {
+                  img.classList.add('active');
+              } else {
+                  img.classList.remove('active');
+              }
+              });
+          }
+          function rotateImages() {
+              showImage(currentIndex);
+              currentIndex = (currentIndex + 1) % images.length;
+          }
+          setInterval(rotateImages, 2500);
+      </script>
+  <br>
+      <table style="margin-left:auto;margin-right:auto;">
           <tr>
               <th><h1>Further Detatils</h1></th>
               <th><h1>Reach Us</h1></th>
@@ -92,6 +138,6 @@
               <th><br>Muscat Oman<br><br>+968 99 99 99 99<br><br>HotelCo@hotels.com<br><br>Fax: +968 33 44 55</th>
           </tr>
       </table>
-      <br><h2 style="margin-left: 40px;">Hotels & Co © 2023</h2>
-</footer>
+      <br><h2 style="margin-left: 40px;">Hotels & Co © 2023</h2><br>
+  </footer>
 </html>

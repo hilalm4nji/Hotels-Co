@@ -24,12 +24,14 @@
       <div class="logo">
           <a href="index.html"><img src="media/logo.png"></a>
       </div>
-      <div class="nav-items" style="margin-left: 51%; margin-top: 4%;">
+      <div class="nav-items" style="margin-left: 47%; margin-top: 3%;">
         <a href="index.html">Home</a>
         <a href="contact us.html">Contact Us</a>
         <a href="AboutUs.html">About Us</a>
         <a href="News.html">News</a>
         <a href="reservations.html">Rooms & Reservation</a>
+        <a href="funPage.html">Fun Page</a>
+        <a href="Questionnaire.html"> Questionnaire </a>
       </div>
   </div>
 </header>
@@ -109,7 +111,51 @@
 
 <footer>
   <img src="media/logo.png" class="logoFooter">
-      <table>
+  <br>
+      <marquee direction="left" height="70" color="#001f3f">
+          <strong style="color:navy; font-size: 30px;">Welcome to the Hotel & Co website!</strong>
+          <p style="margin-left: 62px;font-weight: bold;color: grey;" id="CurrentDandT"></p>
+              <div>
+                      <script>
+                          function CurrentDandT() 
+                          {
+                              const now = new Date();
+                              const date = now.toDateString();
+                              const time = now.toLocaleTimeString();
+                              document.getElementById('CurrentDandT').innerHTML = `Today is ${date}, and the time is ${time}`;
+                          }
+                  CurrentDandT();
+                  setInterval(CurrentDandT, 1000);
+                      </script>
+              </div>
+      </marquee>
+      <div id="photo-gallery">
+          <img src="media/hotel1.jpg" alt="hotel photo" class="active">
+          <img src="media/hotel2.jpg" alt="hotel photo">
+          <img src="media/hotel3.jpg" alt="hotel photo">
+      </div>
+      <div id="text"></div>
+  
+      <script>
+          const images = document.querySelectorAll('#photo-gallery img');
+          let currentIndex = 0;
+          function showImage(index) {
+              images.forEach((img, i) => {
+              if (i === index) {
+                  img.classList.add('active');
+              } else {
+                  img.classList.remove('active');
+              }
+              });
+          }
+          function rotateImages() {
+              showImage(currentIndex);
+              currentIndex = (currentIndex + 1) % images.length;
+          }
+          setInterval(rotateImages, 2500);
+      </script>
+  <br>
+      <table style="margin-left:auto;margin-right:auto;">
           <tr>
               <th><h1>Further Detatils</h1></th>
               <th><h1>Reach Us</h1></th>
@@ -119,6 +165,6 @@
               <th><br>Muscat Oman<br><br>+968 99 99 99 99<br><br>HotelCo@hotels.com<br><br>Fax: +968 33 44 55</th>
           </tr>
       </table>
-      <br><h2 style="margin-left: 40px;">Hotels & Co © 2023</h2>
-</footer>
+      <br><h2 style="margin-left: 40px;">Hotels & Co © 2023</h2><br>
+  </footer>
 </html>

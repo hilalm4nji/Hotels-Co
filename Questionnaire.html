@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang= "en">
+    
+    <head>
+        <title> Questionnaire </title>
+        <link rel="stylesheet" href="style.css" type="text/css">
+    </head>
+    
+    <body>
+        <div class="overlay">
+            <form id="feedbackForm">
+                <br>
+                <fieldset>
+                    <legend>
+                        Feedback Questionnaire
+                    </legend>
+                        <h3>
+                            Doing this feedback will help us improve our website to meet your expectations
+                        </h3>
+                        <div class="Name">
+                            <label for="Name">Name:</label>
+                            <input type="text" id="Name" name="Name" placeholder="e.g. Mohammed Ahmed" required>
+                        </div>
+                        <br>
+                        <fieldset>
+                            <legend>
+                                Which of our services do you like?
+                            </legend>
+                            <div class="CheckBox-Services">
+                                    <p>
+                                        <input type="checkbox" name="service" value="newsletter">
+                                        <label for="newsletter">Our newsletter(if you are Subscribed)</label>
+                                    </p>
+                                    <p>
+                                        <input type="checkbox" name="service" value="contact us">
+                                        <label for="contact us">Contact us</label>
+                                    </p>
+                                    <p>
+                                        <input type="checkbox" name="service" value="room reservation">
+                                        <label for="room reservation">Room reservation</label>
+                                    </p>
+                                    <p>
+                                        <input type="checkbox" name="service" value="other">
+                                        <label for="other">other:</label>
+                                        <input type="text" name="other" id="other">
+                                    </p>
+                            </div>
+                        </fieldset>
+                        <br>
+                        <fieldset>
+                            <legend>
+                                Rate your experience in scale 1 to 5
+                            </legend>
+                            <div class="Radio-Experience">
+                                <p>
+                                    <input type="radio" name="experience" value="5">
+                                    <label for="5">5</label>
+                                </p>
+                                <p>
+                                    <input type="radio" name="experience" value="4">
+                                    <label for="4">4</label>
+                                </p>
+                                <p>
+                                    <input type="radio" name="experience" value="3">
+                                    <label for="3">3</label>
+                                </p>
+                                <p>
+                                    <input type="radio" name="experience" value="2">
+                                    <label for="2">2</label>
+                                </p>
+                                <p>
+                                    <input type="radio" name="experience" value="1">
+                                    <label for="1">1</label>
+                                </p>
+                            </div>
+                        </fieldset>
+                        <br>
+                        <fieldset>
+                            <legend>
+                                Any comments you want to add
+                            </legend>
+                            <label for="comments">Comments:</label>
+                            <textarea name="comments" id="comments" cols="50" rows="4" placeholder="Add your comments here"></textarea>
+                        </fieldset>
+                        <div class="validationMessages">
+                            <p id="nameError" class="error"></p>
+                            <p id="checkboxError" class="error"></p>
+                            <p id="radioError" class="error"></p>
+                        </div>
+                        <button type="submit">Submit</button>
+                        <button type="button"><a href="index.html" style="text-decoration: none;color: #fff;">Home Page</a></button>
+                        <br>
+                        <br>
+                </fieldset>
+            </form>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
