@@ -8,7 +8,7 @@
     
     <body>
         <div class="overlay">
-            <form id="feedbackForm">
+            <form id="feedbackForm" action="questionnaireDB.php" method="post">
                 <br>
                 <fieldset>
                     <legend>
@@ -19,7 +19,7 @@
                         </h3>
                         <div class="Name">
                             <label for="Name">Name:</label>
-                            <input type="text" id="Name" name="Name" placeholder="e.g. Mohammed Ahmed" required>
+                            <input type="text" id="Name" name="yourName" placeholder="e.g. Mohammed Ahmed" required>
                         </div>
                         <br>
                         <fieldset>
@@ -28,19 +28,19 @@
                             </legend>
                             <div class="CheckBox-Services">
                                     <p>
-                                        <input type="checkbox" name="service" value="newsletter">
+                                        <input type="checkbox" name="services" value="newsletter">
                                         <label for="newsletter">Our newsletter(if you are Subscribed)</label>
                                     </p>
                                     <p>
-                                        <input type="checkbox" name="service" value="contact us">
+                                        <input type="checkbox" name="services" value="contact us">
                                         <label for="contact us">Contact us</label>
                                     </p>
                                     <p>
-                                        <input type="checkbox" name="service" value="room reservation">
+                                        <input type="checkbox" name="services" value="room reservation">
                                         <label for="room reservation">Room reservation</label>
                                     </p>
                                     <p>
-                                        <input type="checkbox" name="service" value="other">
+                                        <input type="checkbox" name="services" value="other">
                                         <label for="other">other:</label>
                                         <input type="text" name="other" id="other">
                                     </p>
@@ -92,8 +92,8 @@
                         <br>
                         <br>
                 </fieldset>
+                
             </form>
         </div>
-        <script src="script.js"></script>
     </body>
 </html>
